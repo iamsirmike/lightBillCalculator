@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="javaScript/addfields.js"></script>
+    <script src="javaScript/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form>
+                    <div class="wrapper"> 
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <!-- <label for="inputEmail4">Email</label> -->
+                                <input type="text" class="form-control" id="name1" placeholder="name">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <!-- <label for="inputPassword4">Password</label> -->
+                                <input type="text" class="form-control" id="point" placeholder="total points">
+                            </div>
+                        </div><hr>
+                    </div>
+ <!--add new field button--> <button class="add_fields btn btn-primary">Add More Fields</button>
+                            <button class="btn btn-success" onclick="calc()">calculate</button>
+                           
+                </form>
+            </div>   
+            
+        </div>
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--JQUERY SCRIPT TO ADD NEW FIELD-->
+    <script>
+            //Add Input Fields
+            $(document).ready(function() {
+                var max_fields = 10; //Maximum allowed input fields 
+                var wrapper    = $(".wrapper"); //Input fields wrapper
+                var add_button = $(".add_fields"); //Add button class or ID
+                var x = 1; //Initlal input field is set to 1
+                var z = 2; //setting unique id for inputs which increases when new input item is added
+                var n = 2; //unique id for name
+                
+                //When user click on add input button
+                $(add_button).click(function(e){
+                    e.preventDefault();
+                    //Check maximum allowed input fields
+                    if(x < max_fields){ 
+                        x++; //input field increment
+                         //add input field
+                        $(wrapper).append('<div><div class="form-row"><div class="form-group col-md-4"><input type="text" class="form-control" id="name1" placeholder="name"></div><div class="form-group col-md-4"><input type="text" class="form-control" id="point'+ z++ +'" placeholder="total points"></div><br><br><div class="remove_field class="form-group col-md-4"><i class="fa fa-times" style="color:red;"></a></div></div><hr>');
+                    }
+                });
+                
+                //when user click on remove button
+                $(wrapper).on("click",".remove_field", function(e){ 
+                    e.preventDefault();
+                    $(this).parent('div').remove(); //remove inout field
+                    x--; //inout field decrement
+                })
+            });
+    </script>
+</body>
+</html>
