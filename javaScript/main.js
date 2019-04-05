@@ -1,10 +1,17 @@
 function calc(){
    var name = document.getElementsByTagName('input').length;
    let bill = parseFloat(document.getElementById("bill").value);
-   if (name === 3) {
+   let totalbill = 0;
+   let billperpoint = 0;
+   
+   if (name === 4) {
       var name1 = document.getElementById("name1").value;
       var point1 = document.getElementById("point1").value;
-      console.log(name1, point1);
+      let totalpoints = point1;
+      billperpoint = bill / totalpoints;
+      document.getElementById("totalpoints").value = totalpoints;
+      totalbill = billperpoint * totalpoints;
+      console.log(name1," ", point1, " ", billperpoint," ", totalbill);
    } else if (name === 5) {
       alert("use id 2")
    } else if (name === 7) {
