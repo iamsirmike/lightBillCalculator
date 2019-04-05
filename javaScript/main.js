@@ -11,6 +11,7 @@ function calc(){
       billperpoint = bill / totalpoints;
       document.getElementById("totalpoints").value = totalpoints;
       totalbill = billperpoint * totalpoints;
+      document.getElementById("test").innerHTML = name1;
       console.log(name1," ", point1, " ", billperpoint," ", totalbill);
    } else if (name === 5) {
       alert("use id 2")
