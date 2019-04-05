@@ -16,6 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 card card-container">
+             <input type="text" class="form-control" id="bill" placeholder="Enter bill amount"><hr><hr>
                 <form>
                     <div class="wrapper"> 
                         <div class="form-row">
@@ -28,17 +29,21 @@
                                 <input type="text" class="form-control" id="point1" placeholder="total points">
                             </div>
                         </div><hr>
-                    </div>
- <!--add new field button--> <button class="add_fields btn btn-primary">Add More Fields</button>
-                            
-                           
+                    </div>      
                 </form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="add_fields btn btn-primary">Add More Fields</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" onclick="calc()">calculate</button>
+                    </div>
+                </div>  
             </div>   
-            
         </div>
     </div>
 
-    <button class="btn btn-success" onclick="calc()">calculate</button>
+   
     
 
 

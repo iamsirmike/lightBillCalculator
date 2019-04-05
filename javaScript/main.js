@@ -1,24 +1,27 @@
 function calc(){
    var name = document.getElementsByTagName('input').length;
-   if (name === 2) {
-      alert("use id 1")
-   } else if (name === 4) {
+   let bill = parseFloat(document.getElementById("bill").value);
+   if (name === 3) {
+      var name1 = document.getElementById("name1").value;
+      var point1 = document.getElementById("point1").value;
+      console.log(name1, point1);
+   } else if (name === 5) {
       alert("use id 2")
-   } else if (name === 6) {
+   } else if (name === 7) {
       alert("use id 3")
-   } else if (name === 8) {
+   } else if (name === 9) {
       alert("use id 4")
-   } else if (name === 10) {
+   } else if (name === 11) {
       alert("use id 5")
-   } else if (name === 12) {
+   } else if (name === 13) {
       alert("use id 6")
-   } else if (name === 14) {
+   } else if (name === 15) {
       alert("use id 7")
-   } else if (name === 16) {
+   } else if (name === 17) {
       alert("use id 8")
-   } else if (name === 18) {
+   } else if (name === 19) {
       alert("use id 9")
-   } else if (name === 20) {
+   } else if (name === 21) {
       alert("use id 10")
    } 
 
