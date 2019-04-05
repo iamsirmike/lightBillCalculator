@@ -11,6 +11,8 @@
     <script src="javaScript/addfields.js"></script>
     <script src="javaScript/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -38,11 +40,36 @@
                         <button class="add_fields btn btn-primary form-control">Add More Fields</button>
                     </div>
                     <div class="col-md-6">
-                        <button class="btn btn-success form-control" onclick="calc()">calculate</button>
+                        <button class="btn btn-success form-control" onclick="calc()" data-toggle="modal" data-target="#myModal">calculate</button>
                     </div>
                 </div>  
             </div>   
         </div>
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    <p id="test"></p>
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+      
     </div>
 
    
